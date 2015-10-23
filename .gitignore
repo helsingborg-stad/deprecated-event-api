@@ -9,14 +9,15 @@
 # Ignore everything in the "wp-content" directory, except the "plugins"
 # and "themes" directories.
 # and "mu-plugins"
-wp-content/*
+wp-content/*	
 !wp-content/plugins/
 !wp-content/mu-plugins/
 !wp-content/themes/
 
 # Ignore everything in the "plugins" directory, except the plugins listed below
 wp-content/plugins/*
-!wp-content/plugins/advanced-custom-fields
+!wp-content/plugins/rest-api
+!wp-content/plugins/rest-api-console
 
 # Ignore everything in the "themes" directory, except the Helsingborg theme
 wp-content/themes/*
