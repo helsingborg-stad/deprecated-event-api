@@ -1,0 +1,7 @@
+---
+swagger: "2.0"
+info:
+  version: "1"
+  title: "Event API"
+  description: "API for Helsingborg Event API"
+paths: {}
