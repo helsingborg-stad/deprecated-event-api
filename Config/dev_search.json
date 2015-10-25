@@ -1,5 +1,5 @@
 {
-	"search" : {
-		"api_base_url" : "http://localhost/eventhack/event-api/example_data/" 
+	"wordpress" : {
+		"api_base_url" : "http://event.dev/wp-json/wp/v2/" 
 	}	
 }

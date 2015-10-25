@@ -1,5 +1,7 @@
 {
 	"wordpress" : {
-		"api_base_url" : "http://event.dev/wp-json/wp/v2/" 
+		"api_base_url" : "http://event.dev/wp-json/wp/v2/",
+		"username" : "admin",
+		"password" : "admin"
 	}	
 }
