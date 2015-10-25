@@ -9,6 +9,7 @@ $validateKey = function($route){
     	if($key['key'] == $key_parameter){
     		# Valid key, place author_id in session
         	$app->flashNow("author_id" , $key['author_id']);
+        	return true;
     	}
 	}
 

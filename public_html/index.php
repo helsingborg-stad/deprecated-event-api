@@ -14,8 +14,12 @@ $app->get("/v1/event", $validateKey, function() use ($app) {
 	$app->render("event.php", array(
 		"app" => $app
 	),200);
-	// echo $app->config("templates.path");
-	// echo $app->view()->getData("flash")['author_id'];
+});
+
+$app->post("/v1/event", $validateKey, function() use ($app) {
+	$app->render("create_event.php", array(
+		"app" => $app
+	),200);		
 });
 
 $app->run();
