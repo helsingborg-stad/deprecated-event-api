@@ -1,0 +1,192 @@
+swagger: '2.0'
+info:
+  version: '1'
+  title: Event API
+  description: API for Helsingborg Event API
+  produces:
+  - application/json
+paths:
+  /events:
+    get:
+      summary: Get one or serveral events
+      description:
+      parameters:
+        - name: q
+          in: query
+          description: Return events containing the supplied keywords
+          required: false
+          type: string
+        - name: event_id
+          in: query
+          description: Comma separated list of event ids
+          required: false
+          type: string
+        - name: venue_id
+          in: query
+          description: Comma separated list of venue ids
+          required: false
+          type: string
+        - name: organisation_id
+          in: query
+          description: Comma separated list of organisation ids
+          required: false
+          type: string
+        - name: start_from
+          in: query
+          description: Only return events with start dates after the given UTC date
+          required: false
+          type: date-time
+        - name: start_end
+          in: query
+          description: Only return events with end dates after the given UTC date
+          required: false
+          type: date-time
+      responses:
+        '200':
+          description: Array of all matching events
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/event'
+        default:
+          description: Unexpected error (sorry)
+          schema:
+            $ref: '#/definitions/error'
+  /event:
+    post:
+      summary: Create an event
+      responses:
+          '200':
+            description: The newly created event
+            schema:
+              type: object
+              items:
+                $ref: '#/definitions/event'
+          default:
+            description: Unexpected error (sorry)
+            schema:
+              $ref: '#/definitions/error'
+    put:
+      summary: Update an event
+      responses:
+          '200':
+            description: The newly update event
+            schema:
+              type: object
+              items:
+                $ref: '#/definitions/event'
+          default:
+            description: Unexpected error (sorry)
+            schema:
+              $ref: '#/definitions/error'
+    delete:
+      summary: Delete an event
+      responses:
+          '200':
+            description: The newly update event            
+          default:
+            description: Unexpected error (sorry)
+            schema:
+              $ref: '#/definitions/error'
+  /venues:
+    get:
+      summary: Get one or serveral venues
+      responses:
+          '200':
+            description: Array of venuews
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/venue'
+          default:
+            description: Unexpected error (sorry)
+            schema:
+              $ref: '#/definitions/error'
+  /venue:
+    post:
+      summary: Create a venue
+      responses:
+          '200':
+            description: The newly created venue
+            schema:
+              type: object
+              items:
+                $ref: '#/definitions/venue'
+          default:
+            description: Unexpected error (sorry)
+            schema:
+              $ref: '#/definitions/error'
+    put:
+      summary: Update a venue
+      responses:
+          '200':
+            description: The newly update venue
+            schema:
+              type: object
+              items:
+                $ref: '#/definitions/venue'
+          default:
+            description: Unexpected error (sorry)
+            schema:
+              $ref: '#/definitions/error'
+  /organisations:
+    get:
+      summary: Get one or serveral organisations
+      responses:
+          '200':
+            description: Array of organisations
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/organisation'
+          default:
+            description: Unexpected error (sorry)
+            schema:
+              $ref: '#/definitions/error'
+  /organisation:
+    put:
+      summary: Update an organisation
+      responses:
+            '200':
+              description: The newly update organisation
+              schema:
+                type: object
+                items:
+                  $ref: '#/definitions/organisation'
+            default:
+              description: Unexpected error (sorry)
+              schema:
+                $ref: '#/definitions/error'
+definitions:  
+  event:
+    type: object
+    required:
+      - id
+    properties:
+      id:
+        type: string
+        description:              
+  organisation:
+    type: object
+    required:
+      - id
+    properties:
+      id:
+        type: string
+        description:
+  venue:
+    type: object
+    required:
+      - id
+    properties:
+      id:
+        type: string
+        description: 
+  error:
+    type: object
+    required:
+      - message
+    properties:
+      message:
+        type: string
+        description: A short description of the error meant for the developers using the API    
