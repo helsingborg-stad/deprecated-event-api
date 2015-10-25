@@ -22,6 +22,7 @@ if ($wp_response->code == 201){
 
 $response = ['events' => $events];	
 $app->contentType("application/json; charset=utf-8");
+$app->response->setStatus(201);
 $app->response->setBody(json_encode($response, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES));
 
 ?>
