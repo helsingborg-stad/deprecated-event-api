@@ -25,12 +25,12 @@ Class Search {
 
 		$url = $this->app->config('search')['api_base_url'] . 'search';		
 		$headers = array("Accept" => "application/json", "Content-Type" => "application/json");
-		$response = Unirest\Request::post($url, $headers, $body);
+		$response = Unirest\Request::post($url, $headers, json_encode($body));
 
 		// TODO Handle error response
 		if ($response->code == 200){			
 			$event_ids = $response->body->searchResults;
-						
+
 			return $event_ids;
 		}		
 	}
