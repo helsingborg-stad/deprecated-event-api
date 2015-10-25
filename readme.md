@@ -67,7 +67,8 @@ Some of the changes are:
 * Email is moved from address to location
 * Geo now contains a new field called projection (note: the search engine ONLY supports WGS84). We only support GeoCoordinates and not GeoShapes, ie only a specific geographical coordinate. If GeoShape is needed in the future GeoJSON should be used instead due to GeoShapes limitations.
 * An event does not have a performer or organizer
-* In AggregatedOffer the properties HighPrice and LowPrice are added
+* In AggregatedOffer the fields HighPrice and LowPrice are added
+* Added fields created and modified to an event, both those fields are UTC dates
 
 See an example of an event object at [piratepad](http://piratepad.net/RA1Xy8ZVfI).
 
