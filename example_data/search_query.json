@@ -1,0 +1,12 @@
+{
+  "reference" : "din referens"
+  "startIndex" : 0,
+  "limit" : 10,
+  "query" : {
+    "type" : "tagquery",
+    "tags" : [
+      "apa",
+      "hotell"
+    ]  
+  }
+}

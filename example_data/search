@@ -1,0 +1,7 @@
+{
+  "reference" : "din referens" 
+  "totalNumberOfSearchResults" : 1234,
+  "searchResults" : [
+    4,5
+  ]
+}
