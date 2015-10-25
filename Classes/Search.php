@@ -24,7 +24,7 @@ Class Search {
 				];
 
 		$url = $this->app->config('search')['api_base_url'] . 'search';		
-		$headers = array("Accept" => "application/json");		
+		$headers = array("Accept" => "application/json", "Content-Type" => "application/json");
 		$response = Unirest\Request::post($url, $headers, $body);
 
 		// TODO Handle error response
