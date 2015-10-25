@@ -1,0 +1,11 @@
+{
+    "require": {
+        "zendframework/zend-config": "*",
+        "zendframework/zend-servicemanager" : "*",
+        "zendframework/zend-json" : "*",
+        
+        "slim/slim" : "2.*",
+
+        "mashape/unirest-php": "2.*"
+    }
+}
