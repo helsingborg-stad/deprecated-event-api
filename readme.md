@@ -3,7 +3,7 @@
 REST API built with PHP Slim Framework meant to be the only externally facing API to create/get/update events in the Event Database. The API in turn calls the WP API of the Event WP application as well as the internal Search API.
 
 ##Configuration
-All configuration files are in teh /Config directory. There are one config file to handle API keys (*_keys.json), one for Search API settings (*_search_json) and one for Wordpress API settings (*_wordpress.json).
+All configuration files are in teh /Config directory. There are one config file to handle API keys (_keys.json), one for Search API settings (_search_json) and one for Wordpress API settings (_wordpress.json).
 
 Using prod_ config files if existing, otherwise test_ and finally dev_ if no other files exists
 
